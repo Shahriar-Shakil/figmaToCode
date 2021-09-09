@@ -1,0 +1,124 @@
+*,
+ ::after,
+ ::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    text-transform: capitalize;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    font-size: 4rem;
+    line-height: 1.2em;
+}
+
+p {
+    margin-bottom: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+label {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    color: #000000;
+    font-size: 1.125rem;
+    display: block;
+    margin-bottom: 0.778rem;
+}
+
+input {
+    width: 100%;
+    background: #EDEDED;
+    border: 1px solid #C7C7C7;
+    font-size: 1rem;
+    padding: 1.125rem;
+    outline: none;
+    margin-bottom: 2.5rem;
+}
+
+button {
+    background: #5200FF;
+    width: 100%;
+    padding: 1rem;
+    color: #fff;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    border: 1px solid #5200FF;
+    cursor: pointer;
+}
+
+.left-col {
+    background-color: #5200FF;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.content {
+    position: relative;
+}
+
+.left-col,
+.right-col {
+    padding: 6.75rem 8vw;
+}
+
+.left-col:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: 100%;
+    opacity: .22;
+}
+
+@media only screen and (min-width:576px) {
+    form {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 2em
+    }
+    button {
+        width: auto;
+        padding: 1rem 2.5rem;
+    }
+}
+
+@media only screen and (min-width: 1260px) {
+    form {
+        display: block;
+    }
+    .form-wrapper {
+        width: 100%;
+    }
+    h1 {
+        text-align: right;
+    }
+    .container {
+        display: flex;
+        place-items: center;
+    }
+    .left-col,
+    .right-col {
+        flex-basis: 0;
+        flex-grow: 1;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+}
